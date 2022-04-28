@@ -1,0 +1,14 @@
+syntax = "proto3";
+package lostak.greek.alpha;
+
+import "gogoproto/gogo.proto";
+import "alpha/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/lostak/greek/x/alpha/types";
+
+// GenesisState defines the alpha module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
